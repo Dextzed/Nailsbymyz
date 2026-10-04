@@ -1,704 +1,649 @@
-/* STREAMING_CHUNK:Inicializando estilos base e tipografia fluida... */
 html {
-scroll-behavior: smooth;
-font-size: 16px;
+    scroll-behavior: smooth;
 }
-
 body {
-font-family: Arial, sans-serif;
-margin: 0;
-padding: 0;
-overflow-x: hidden;
-background-color: #0d0d0d;
-color: #ffffff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
-
-/* STREAMING_CHUNK:Configurando estilos do cabeçalho fixo (sticky)... */
 header {
-background-color: #161a18;
-padding: 10px 20px;
-height: auto;
-min-height: 90px;
-display: flex;
-align-items: center;
-justify-content: space-between;
-box-sizing: border-box;
-position: sticky;
-top: 0;
-z-index: 1000;
-width: 100%;
+    background-color: #161a18;
+    padding: 10px 40px; /* Padding nas laterais em vez de margin */
+    height: 100px;
+    display: flex;
+    align-items: center; /* Centraliza tudo verticalmente */
+    justify-content: space-between; /* Esquerda, Centro e Direita automáticos */
+    box-sizing: border-box;
+    position: sticky; 
+    top: 0;          
+    z-index: 1000;
+    width: 100%;
+    height: 90px
 }
 
-/* STREAMING_CHUNK:Estilizando elementos da marca no cabeçalho... */
+/* --- Bloco da Esquerda (Marca) --- */
 #marca {
-display: flex;
-flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 #nome2 {
-display: flex;
-align-items: center;
+    display: flex;
+    align-items: center;
+    
 }
 
 #logobt {
-background-color: transparent;
-border: none;
-cursor: pointer;
-padding: 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
 }
 
 #logo {
-width: 40px;
-height: 40px;
-border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    
 }
 
 #nome {
-font-size: 24px;
-font-weight: bold;
-color: aliceblue;
-background-color: transparent;
-border: none;
-cursor: pointer;
-padding: 0 10px;
-font-family: "Times New Roman", Times, Georgia, serif;
-letter-spacing: 3px;
-text-transform: uppercase;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0 10px;
+    font-family: "Times New Roman", Times, Georgia, serif;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: aliceblue;
 }
 
 #subtitulo {
-font-size: 14px;
-font-weight: bold;
-color: aliceblue;
-margin-top: 4px;
-margin-left: 50px;
-margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    color: aliceblue;
+    margin-top: 4px;
+    margin-left: 50px;
+    margin-bottom: 10px;
 }
 
-/* STREAMING_CHUNK:Configurando botões do menu de navegação... */
+/* --- Bloco do Centro (Menu) --- */
 #botoesheader {
-display: flex;
-align-items: center;
-gap: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Espaçamento fixo e proporcional entre os botões */
 }
 
 #botoesheader button {
-background-color: transparent;
-border: none;
-cursor: pointer;
-font-size: 15px;
-color: aliceblue;
-padding: 5px 8px;
-transition: color 0.2s ease;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    color: aliceblue;
+    padding: 5px 8px;
 }
 
-#botoesheader button:hover {
-color: #03f37b;
+/* --- Bloco da Direita (Agendamento) --- */
+#agendamentoh{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 40px;
+    background-color: #25d366;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 15px;
+    color: #333;
+    padding: 5px 8px;
 }
-
-/* STREAMING_CHUNK:Estilizando botão de agendamento do cabeçalho... */
-#agendamentoh {
-display: inline-flex;
-justify-content: center;
-align-items: center;
-width: 150px;
-height: 40px;
-background-color: #25d366;
-border: none;
-border-radius: 15px;
-cursor: pointer;
-font-size: 15px;
-color: #333;
-padding: 5px 8px;
-text-decoration: none;
-font-weight: bold;
-}
-
-/* STREAMING_CHUNK:Configurando seção inicial (hero)... */
 #inicio {
-background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('imagens/img-bg.png');
-background-size: cover;
-background-position: center;
-background-repeat: no-repeat;
-min-height: 80vh;
-display: flex;
-flex-direction: column;
-color: #ffffff;
-text-align: center;
-padding: 40px 20px;
-align-items: center;
-justify-content: center;
+    /* Caminho da imagem de fundo */
+    background-image: url('imagens/img-bg.png');
+    
+    /* Preenche toda a div sem esticar a imagem */
+    background-size: cover; 
+    
+    /* Centraliza a imagem na tela */
+    background-position: center; 
+    
+    /* Impede que a imagem se repita caso a div seja maior que ela */
+    background-repeat: no-repeat; 
+
+    /* Altura da seção (ajuste conforme necessário) */
+    min-height: 80vh; /* Ocupa 80% da altura da tela */
+    
+    
+    display: flex;
+    flex-direction: column;
+    
+    
+    /* Estilos do texto */
+    color: #ffffff; /* Texto branco para destacar do fundo */
+    text-align: center;
+    padding: 20px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('imagens/img-bg.png');
+    align-items: center;     /* Centraliza na vertical */
+}
+#nbm{
+    font-family: "Times New Roman", Times, Georgia, serif;
+    letter-spacing: 3px;
+    text-transform: uppercase;
 }
 
-#nbm {
-font-family: "Times New Roman", Times, Georgia, serif;
-letter-spacing: 3px;
-text-transform: uppercase;
-}
-
+/* Subtítulo / Categoria superior */
 .subtitulo-topo {
-font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-font-size: 12px;
-font-weight: bold;
-text-transform: uppercase;
-letter-spacing: 2px;
-color: #e0a3b0;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #e0a3b0; /* Tom rosa */
 }
 
+/* Título Principal */
 .titulo-principal {
-font-family: "Times New Roman", Times, Georgia, serif;
-font-size: 36px;
-color: #ffffff;
-line-height: 1.2;
-margin: 15px 0;
+    font-family: "Times New Roman", Times, Georgia, serif;
+    font-size: 36px;
+    color: #ffffff;
+    line-height: 1.2;
 }
 
+/* Palavra em Destaque Itálico */
 .titulo-principal span.destaque {
-font-style: italic;
-color: #e0a3b0;
+    font-style: italic;
+    color: #e0a3b0;
 }
 
+/* Texto de Parágrafo */
 .texto-descricao {
-font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-font-size: 14px;
-color: #cccccc;
-line-height: 1.5;
-max-width: 600px;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 14px;
+    color: #cccccc;
+    line-height: 1.5;
 }
-
 #calendario {
-width: 50px;
-height: 50px;
+    width: 50px;
+    height: 50px;
 }
-
 #agendamento-btn {
-width: 300px;
-height: 80px;
-background-color: #03f37b;
-color: #333333;
-margin-top: 50px;
-font-size: 18px;
-
-font-weight: bold;
-
-border: none;
-border-radius: 65px;
-
-cursor: pointer;
-display: inline-flex;
-justify-content: center;
-align-items: center;
-transition: transform 0.2s ease, background-color 0.2s ease;
+    width: 300px;
+    height: 80px;
+    background-color: #03f37b; 
+    color: #333333;
+    margin-top: 80px;
+    font-size: 18px;            
+    font-weight: bold;          
+    border: none;
+    border-radius: 65px;        
+    cursor: pointer;
+    /* Centraliza o texto perfeitamente no meio do botão */
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.2s ease, background-color 0.2s ease;
 }
-
 #agendamento-btn:hover {
-background-color: #02d169;
-transform: scale(1.03);
-
+    background-color: #02d169; 
+    transform: scale(1.03);    
+}
+#botoesqual{
+    display: flex;
+    align-items: center;
+    gap: 80px; 
+    margin-top: 150px;
+}
+#qual1{
+    background-color: transparent;
+    border: none;
+    width: 90px;
+    height: 90px;
+    color: #000;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+#escudo{
+    width: 80px;
+    height: 80px;
+}
+#coracao{
+    width: 80px;
+    height: 80px;
+}
+#qual2{
+    background-color: transparent;
+    border: none;
+    width: 90px;
+    height: 90px;
+    color: #000;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-left: 100px;
+}
+#estrela{
+    width: 80px;
+    height: 80px;
+}
+#qual3{
+    background-color: transparent;
+    border: none;
+    width: 90px;
+    height: 90px;
+    color: #000;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-left: 100px;
 }
 
-/* STREAMING_CHUNK:Estilizando caixas e selos de qualidades... */
-#botoesqual {
-display: flex;
-align-items: center;
-justify-content: center;
-flex-wrap: wrap;
-gap: 40px;
-margin-top: 80px;
-width: 100%;
-}
-
-#qual1, #qual2, #qual3 {
-background-color: rgba(22, 26, 24, 0.7);
-border: 1px solid #1f2a24;
-border-radius: 12px;
-padding: 10px 20px;
-width: auto;
-min-width: 220px;
-height: 90px;
-color: #fff;
-display: inline-flex;
-justify-content: center;
-align-items: center;
-gap: 15px;
-margin-left: 0;
-}
-
-#escudo, #coracao, #estrela {
-width: 50px;
-height: 50px;
-object-fit: contain;
-}
-
-/* STREAMING_CHUNK:Configurando seção de serviços e grade de cartões... */
+/* Estilo Geral da Secção */
 #servicos-section {
-background-color: #0d0d0d;
-padding: 60px 40px;
-display: flex;
-gap: 40px;
-align-items: center;
-justify-content: space-between;
-font-family: Arial, sans-serif;
-color: #ffffff;
-flex-wrap: wrap;
+    background-color: #0d0d0d;
+    padding: 60px 40px;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: space-between;
+    font-family: Arial, sans-serif;
+    color: #ffffff;
 }
 
+/* Lado Esquerdo */
 .servicos-info {
-max-width: 380px;
-display: flex;
-flex-direction: column;
+    max-width: 380px;
+    display: flex;
+    flex-direction: column;
 }
 
 .subtitulo-container {
-display: flex;
-align-items: center;
-gap: 12px;
-margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
 }
 
 .subtitulo {
-font-size: 12px;
-font-weight: bold;
-letter-spacing: 2px;
-color: #03f37b;
-text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #03f37b; /* Verde em destaque */
+    text-transform: uppercase;
 }
 
 .linha {
-width: 40px;
-height: 1px;
-background-color: #03f37b;
+    width: 40px;
+    height: 1px;
+    background-color: #03f37b; /* Verde na linha decorativa */
 }
 
 .titulo-servicos {
-font-family: "Times New Roman", Times, Georgia, serif;
-font-size: 38px;
-line-height: 1.2;
-margin: 0 0 20px 0;
-font-weight: normal;
+    font-family: "Times New Roman", Times, Georgia, serif;
+    font-size: 38px;
+    line-height: 1.2;
+    margin: 0 0 20px 0;
+    font-weight: normal;
 }
 
 .titulo-servicos .destaque {
-font-style: italic;
-color: #03f37b;
+    font-style: italic;
+    color: #03f37b; /* Verde na palavra em destaque */
 }
 
 .descricao-servicos {
-font-size: 14px;
-color: #a0a0a0;
-line-height: 1.5;
-margin-bottom: 30px;
+    font-size: 14px;
+    color: #a0a0a0;
+    line-height: 1.5;
+    margin-bottom: 30px;
 }
 
 .btn-ver-todos {
-display: inline-flex;
-align-items: center;
-gap: 10px;
-padding: 12px 24px;
-border: 1px solid #03f37b;
-border-radius: 30px;
-color: #ffffff;
-text-decoration: none;
-font-size: 13px;
-width: fit-content;
-transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 24px;
+    border: 1px solid #03f37b; /* Borda verde */
+    border-radius: 30px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 13px;
+    width: fit-content;
+    transition: all 0.3s ease;
 }
 
 .btn-ver-todos:hover {
-background-color: #03f37b;
-color: #000000;
-font-weight: bold;
+    background-color: #03f37b; /* Preenchimento verde ao passar o mouse */
+    color: #000000;            /* Texto preto para dar contraste com o verde */
+    font-weight: bold;
 }
 
+/* Lado Direito - Grelha dos Cartões */
 .cards-grid {
-display: flex;
-gap: 16px;
-flex-wrap: nowrap;
-overflow-x: auto;
-padding-bottom: 10px;
-max-width: 100%;
+    display: flex;
+    gap: 16px;
+    flex-wrap: nowrap;
 }
 
+/* Estilo Individual dos Cartões */
 .card-servico {
-background-color: #161a18;
-border: 1px solid #1f2a24;
-border-radius: 12px;
-overflow: hidden;
-min-width: 170px;
-width: 170px;
-display: flex;
-flex-direction: column;
-transition: transform 0.3s ease, border-color 0.3s ease;
-flex-shrink: 0;
+    background-color: #161a18; /* Fundo do card levemente esverdeado/escuro */
+    border: 1px solid #1f2a24;  /* Borda subtil esverdeada */
+    border-radius: 12px;
+    overflow: hidden;
+    width: 170px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
 .card-servico:hover {
-transform: translateY(-5px);
-border-color: #03f37b;
+    transform: translateY(-5px);
+    border-color: #03f37b; /* Realce na borda ao passar o mouse */
 }
 
 .card-servico img {
-width: 100%;
-height: 180px;
-object-fit: cover;
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
 }
 
 .card-conteudo {
-padding: 15px 12px;
+    padding: 15px 12px;
 }
 
 .card-conteudo h3 {
-font-family: "Times New Roman", Times, Georgia, serif;
-font-size: 16px;
-margin: 0 0 8px 0;
-color: #ffffff;
-font-weight: normal;
+    font-family: "Times New Roman", Times, Georgia, serif;
+    font-size: 16px;
+    margin: 0 0 8px 0;
+    color: #ffffff;
+    font-weight: normal;
 }
 
 .card-conteudo p {
-font-size: 11px;
-color: #a0a0a0;
-line-height: 1.4;
-margin: 0;
+    font-size: 11px;
+    color: #a0a0a0;
+    line-height: 1.4;
+    margin: 0;
 }
 
-/* STREAMING_CHUNK:Estilizando o layout da seção sobre mim... */
+/* Container Principal da Seção Sobre Mim */
 #sobre-section {
-background-color: #141414;
-padding: 80px 40px;
-display: flex;
-align-items: center;
-justify-content: space-between;
-gap: 50px;
-font-family: Arial, sans-serif;
-color: #ffffff;
-position: relative;
-flex-wrap: wrap;
+    background-color: #141414;
+    padding: 80px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    position: relative;
 }
 
+/* 1. Foto na Esquerda */
 .sobre-imagem {
-flex: 1;
-max-width: 450px;
-width: 100%;
+    flex: 1;
+    max-width: 450px;
 }
 
 .sobre-imagem img {
-width: 100%;
-height: 320px;
-object-fit: cover;
-border-radius: 12px;
-border: 1px solid #1f2a24;
-}
-
-.sobre-info {
-flex: 1.2;
-max-width: 480px;
-display: flex;
-flex-direction: column;
-width: 100%;
-}
-
-.titulo-sobre {
-font-family: "Times New Roman", Times, Georgia, serif;
-font-size: 38px;
-line-height: 1.2;
-margin: 0 0 20px 0;
-font-weight: normal;
-}
-
-.titulo-sobre .destaque {
-font-style: italic;
-color: #03f37b;
-}
-
-.descricao-sobre {
-font-size: 14px;
-color: #a0a0a0;
-line-height: 1.6;
-margin-bottom: 30px;
-}
-
-.btn-conheca-mais {
-display: inline-flex;
-align-items: center;
-gap: 10px;
-padding: 12px 26px;
-border: 1px solid #03f37b;
-border-radius: 30px;
-color: #ffffff;
-text-decoration: none;
-font-size: 13px;
-width: fit-content;
-transition: all 0.3s ease;
-}
-
-.btn-conheca-mais:hover {
-background-color: #03f37b;
-color: #000000;
-font-weight: bold;
-}
-
-.sobre-decoracao {
-display: flex;
-flex-direction: column;
-align-items: flex-end;
-justify-content: center;
-padding-right: 20px;
-width: 100%;
-}
-
-.manuscrito {
-font-family: "Brush Script MT", "Dancing Script", cursive;
-font-size: 32px;
-color: #03f37b;
-line-height: 1.2;
-text-align: right;
-margin: 0;
-transform: rotate(-6deg);
-}
-
-/* STREAMING_CHUNK:Configurando rodapé e ícones de redes sociais... */
-footer {
-display: flex;
-flex-direction: column;
-align-items: center;
-
-justify-content: center;
-background-color: #343434;
-color: aliceblue;
-padding: 25px 20px;
-height: auto;
-min-height: 150px;
-}
-
-.footer-socials {
-display: flex;
-align-items: center;
-justify-content: center;
-}
-
-#insta-logo {
-margin-top: 10px;
-margin-right: 15px;
-width: 36px;
-height: 36px;
-transition: opacity 0.2s ease;
-}
-
-#whatsapp-logo {
-margin-top: 10px;
-width: 36px;
-height: 36px;
-transition: opacity 0.2s ease;
-}
-
-#insta-logo:hover, #whatsapp-logo:hover {
-opacity: 0.8;
-}
-
-#direitos-autorais {
-margin-top: 15px;
-font-size: 12px;
-color: #cccccc;
-text-align: center;
-}
-
-/* STREAMING_CHUNK:Implementando Media Queries para Tablets e Dispositivos Móveis... */
-
-/* Tablets e Telas Médias (até 1024px) */
-@media screen and (max-width: 1024px) {
-header {
-padding: 10px 20px;
-}
-
-#botoesheader {
-    gap: 12px;
-}
-
-#botoesheader button {
-    font-size: 13px;
-    padding: 4px 6px;
-}
-
-#agendamentoh {
-    width: 130px;
-    font-size: 13px;
-}
-
-#servicos-section, #sobre-section {
-    padding: 50px 25px;
-    gap: 30px;
-}
-
-.titulo-servicos, .titulo-sobre {
-    font-size: 32px;
-}
-
-
-}
-
-/* Smartphones e Telas Menores (até 768px) /
-@media screen and (max-width: 768px) {
-/ Cabeçalho Responsivo */
-header {
-flex-direction: column;
-height: auto;
-padding: 15px;
-gap: 12px;
-position: relative;
-}
-
-#marca {
-    align-items: center;
-    text-align: center;
-}
-
-#subtitulo {
-    margin-left: 0;
-    text-align: center;
-}
-
-#botoesheader {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-}
-
-#botoesheader button {
-    font-size: 14px;
-}
-
-#agendamentoh {
-    width: 140px;
-    height: 36px;
-}
-
-/* Seção Inicial (Hero) */
-#inicio {
-    min-height: 70vh;
-    padding: 30px 15px;
-}
-
-.titulo-principal {
-    font-size: 28px;
-}
-
-.texto-descricao {
-    font-size: 13px;
-}
-
-#agendamento-btn {
-    width: 260px;
-    height: 65px;
-    font-size: 16px;
-    margin-top: 35px;
-}
-
-/* Caixas de Qualidades */
-#botoesqual {
-    flex-direction: column;
-    gap: 15px;
-    margin-top: 50px;
-}
-
-#qual1, #qual2, #qual3 {
     width: 100%;
-    max-width: 280px;
-    margin-left: 0 !important;
-    height: auto;
-    padding: 12px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 1px solid #1f2a24; /* Borda sutil esverdeada */
 }
 
-/* Seção de Serviços */
-#servicos-section {
+/* 2. Textos e Conteúdo no Centro */
+.sobre-info {
+    flex: 1.2;
+    max-width: 480px;
+    display: flex;
     flex-direction: column;
-    padding: 40px 15px;
-    align-items: stretch;
-}
-
-.servicos-info {
-    max-width: 100%;
-    text-align: center;
-    align-items: center;
 }
 
 .subtitulo-container {
-    justify-content: center;
-}
-
-.titulo-servicos {
-    font-size: 30px;
-}
-
-.cards-grid {
-    justify-content: flex-start;
-    width: 100%;
-    padding-bottom: 15px;
-}
-
-/* Seção Sobre Mim */
-#sobre-section {
-    flex-direction: column;
-    padding: 40px 15px;
-    text-align: center;
+    display: flex;
     align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
 }
 
-.sobre-imagem {
-    max-width: 100%;
+.subtitulo {
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #03f37b; /* Verde em destaque */
+    text-transform: uppercase;
 }
 
-.sobre-imagem img {
-    height: 260px;
-}
-
-.sobre-info {
-    max-width: 100%;
-    align-items: center;
+.linha {
+    width: 40px;
+    height: 1px;
+    background-color: #03f37b; /* Linha verde */
 }
 
 .titulo-sobre {
-    font-size: 30px;
+    font-family: "Times New Roman", Times, Georgia, serif;
+    font-size: 38px;
+    line-height: 1.2;
+    margin: 0 0 20px 0;
+    font-weight: normal;
 }
 
-.sobre-decoracao {
+.titulo-sobre .destaque {
+    font-style: italic;
+    color: #03f37b; /* Nome em verde itálico */
+}
+
+.descricao-sobre {
+    font-size: 14px;
+    color: #a0a0a0;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.btn-conheca-mais {
+    display: inline-flex;
     align-items: center;
-    padding-right: 0;
-    margin-top: 15px;
+    gap: 10px;
+    padding: 12px 26px;
+    border: 1px solid #03f37b;
+    border-radius: 30px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 13px;
+    width: fit-content;
+    transition: all 0.3s ease;
+}
+
+.btn-conheca-mais:hover {
+    background-color: #03f37b;
+    color: #000000;
+    font-weight: bold;
+}
+
+/* 3. Manuscrito Decorativo na Direita */
+.sobre-decoracao {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    padding-right: 20px;
 }
 
 .manuscrito {
-    text-align: center;
-    font-size: 26px;
-    transform: rotate(0deg);
+    font-family: "Brush Script MT", "Dancing Script", cursive;
+    font-size: 32px;
+    color: #03f37b; /* Frase em tom verde */
+    line-height: 1.2;
+    text-align: right;
+    margin: 0;
+    transform: rotate(-6deg); /* Leve inclinação para parecer manuscrito */
 }
 
-
-
-/* Dispositivos Muito Pequenos (até 480px) */
-@media screen and (max-width: 480px) {
-.titulo-principal {
-font-size: 24px;
-}
-
-.titulo-servicos, .titulo-sobre {
-    font-size: 26px;
-}
-
-#agendamento-btn {
-    width: 230px;
-    height: 55px;
-    font-size: 15px;
-}
-
-.card-servico {
-    min-width: 150px;
-    width: 150px;
-}
-
-.card-servico img {
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;     
+    justify-content: center; 
+    background-color: #343434;
+    color: aliceblue;
+    padding: 20px;
     height: 150px;
+
 }
+#insta-logo{
+    margin-top: 30px;
+    margin-right: 30px;
+    width: 40px;
+    height: 40px;
+    
+}
+#whatsapp-logo{
+    width: 40px;
+    height: 40px;
+}
+#direitos-autorais{
+    margin-top: 20px;
+    font-size: 12px;
+    color: #cccccc;
+}
+/* ==========================================
+   RESPONSIVIDADE (TELEMÓVEIS E TABLETS)
+   ========================================== */
 
+@media (max-width: 768px) {
 
+    /* 1. Header Ajustado */
+    header {
+        padding: 10px 15px;
+        height: auto;
+        min-height: 70px;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    #botoesheader {
+        gap: 10px;
+    }
+
+    #botoesheader button {
+        font-size: 13px;
+        padding: 4px 6px;
+    }
+
+    #subtitulo {
+        margin-left: 0;
+        font-size: 11px;
+    }
+
+    #agendamentoh {
+        width: auto;
+        height: 35px;
+        font-size: 13px;
+    }
+
+    /* 2. Hero / Início */
+    #inicio {
+        padding: 40px 15px;
+        min-height: auto;
+    }
+
+    .titulo-principal {
+        font-size: 28px;
+    }
+
+    #agendamento-btn {
+        width: 100%;
+        max-width: 280px;
+        height: 60px;
+        font-size: 16px;
+        margin-top: 40px;
+    }
+
+    /* 3. Ícones de Qualidades/Destaques */
+    #botoesqual {
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 50px;
+    }
+
+    #qual2, #qual3 {
+        margin-left: 0; /* Remove as margens fixas que desalinhavam no ecrã pequeno */
+    }
+
+    /* 4. Secção de Serviços */
+    #servicos-section {
+        flex-direction: column;
+        padding: 40px 20px;
+        gap: 30px;
+    }
+
+    .servicos-info {
+        max-width: 100%;
+    }
+
+    .titulo-servicos {
+        font-size: 28px;
+    }
+
+    /* Permite deslizar os cartões de serviços no telemóvel na horizontal */
+    .cards-grid {
+        width: 100%;
+        overflow-x: auto;
+        padding-bottom: 15px;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .card-servico {
+        min-width: 150px; /* Garante que os cards não fiquem esmagados */
+    }
+
+    /* 5. Secção Sobre Mim */
+    #sobre-section {
+        flex-direction: column;
+        padding: 40px 20px;
+        gap: 30px;
+    }
+
+    .sobre-imagem {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .sobre-imagem img {
+        height: 250px;
+    }
+
+    .sobre-info {
+        max-width: 100%;
+    }
+
+    .titulo-sobre {
+        font-size: 28px;
+    }
+
+    .sobre-decoracao {
+        align-items: center;
+        padding-right: 0;
+    }
+
+    .manuscrito {
+        text-align: center;
+        font-size: 26px;
+    }
+
+    /* 6. Rodapé */
+    footer {
+        height: auto;
+        padding: 30px 15px;
+    }
 }
