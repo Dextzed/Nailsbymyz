@@ -7,7 +7,7 @@ body {
     padding: 0;
 }
 header {
-    background-color: #161a18;
+    background-color: #F5ECE5;
     padding: 10px 40px; /* Padding nas laterais em vez de margin */
     height: 100px;
     display: flex;
@@ -58,13 +58,13 @@ header {
     font-family: "Times New Roman", Times, Georgia, serif;
     letter-spacing: 3px;
     text-transform: uppercase;
-    color: aliceblue;
+    color: #000000;
 }
 
 #subtitulo {
     font-size: 14px;
     font-weight: bold;
-    color: aliceblue;
+    color: #000000;
     margin-top: 4px;
     margin-left: 50px;
     margin-bottom: 10px;
@@ -82,7 +82,7 @@ header {
     border: none;
     cursor: pointer;
     font-size: 15px;
-    color: aliceblue;
+    color: #000000;
     padding: 5px 8px;
 }
 
@@ -247,14 +247,14 @@ header {
 
 /* Estilo Geral da Secção */
 #servicos-section {
-    background-color: #0d0d0d;
+    background: linear-gradient(to right, #F5ECE5, #EADBD1); /* Fundo escuro com gradiente */
     padding: 60px 40px;
     display: flex;
     gap: 40px;
     align-items: center;
     justify-content: space-between;
     font-family: Arial, sans-serif;
-    color: #ffffff;
+    color: #000000;
 }
 
 /* Lado Esquerdo */
@@ -271,18 +271,18 @@ header {
     margin-bottom: 20px;
 }
 
-.subtitulo {
-    font-size: 12px;
+#meuserv{
+    font-size: 18px;
     font-weight: bold;
     letter-spacing: 2px;
-    color: #03f37b; /* Verde em destaque */
+    color: #B34A4E; 
     text-transform: uppercase;
 }
 
 .linha {
     width: 40px;
     height: 1px;
-    background-color: #03f37b; /* Verde na linha decorativa */
+    background-color: #0A0A0A; /* preto na linha decorativa */
 }
 
 .titulo-servicos {
@@ -295,12 +295,12 @@ header {
 
 .titulo-servicos .destaque {
     font-style: italic;
-    color: #03f37b; /* Verde na palavra em destaque */
+    color: #B34A4E; /* Vermelho na palavra em destaque */
 }
 
 .descricao-servicos {
     font-size: 14px;
-    color: #a0a0a0;
+    color: #000;
     line-height: 1.5;
     margin-bottom: 30px;
 }
@@ -310,9 +310,9 @@ header {
     align-items: center;
     gap: 10px;
     padding: 12px 24px;
-    border: 1px solid #03f37b; /* Borda verde */
+    border: 1px solid #B34A4E; /* Borda verde */
     border-radius: 30px;
-    color: #ffffff;
+    color: #000;
     text-decoration: none;
     font-size: 13px;
     width: fit-content;
@@ -320,7 +320,7 @@ header {
 }
 
 .btn-ver-todos:hover {
-    background-color: #03f37b; /* Preenchimento verde ao passar o mouse */
+    background-color: #B34A4E; /* Preenchimento verde ao passar o mouse */
     color: #000000;            /* Texto preto para dar contraste com o verde */
     font-weight: bold;
 }
@@ -334,7 +334,7 @@ header {
 
 /* Estilo Individual dos Cartões */
 .card-servico {
-    background-color: #161a18; /* Fundo do card levemente esverdeado/escuro */
+    background-color: #471e1f; /* Fundo do card levemente esverdeado/escuro */
     border: 1px solid #1f2a24;  /* Borda subtil esverdeada */
     border-radius: 12px;
     overflow: hidden;
@@ -346,7 +346,7 @@ header {
 
 .card-servico:hover {
     transform: translateY(-5px);
-    border-color: #03f37b; /* Realce na borda ao passar o mouse */
+    border-color: #B34A4E; /* Realce na borda ao passar o mouse */
 }
 
 .card-servico img {
@@ -376,7 +376,7 @@ header {
 
 /* Container Principal da Seção Sobre Mim */
 #sobre-section {
-    background-color: #141414;
+    background: linear-gradient(to right, #978b82, #6d635c); /* Fundo escuro com gradiente */
     padding: 80px 40px;
     display: flex;
     align-items: center;
@@ -398,7 +398,7 @@ header {
     height: 320px;
     object-fit: cover;
     border-radius: 12px;
-    border: 1px solid #1f2a24; /* Borda sutil esverdeada */
+    border: 1px solid #000; /* Borda sutil esverdeada */
 }
 
 /* 2. Textos e Conteúdo no Centro */
@@ -420,14 +420,14 @@ header {
     font-size: 12px;
     font-weight: bold;
     letter-spacing: 2px;
-    color: #03f37b; /* Verde em destaque */
+    color: #B34A4E; /* Verde em destaque */
     text-transform: uppercase;
 }
 
 .linha {
     width: 40px;
     height: 1px;
-    background-color: #03f37b; /* Linha verde */
+    background-color: #B34A4E; /* Linha vermelho */
 }
 
 .titulo-sobre {
@@ -440,12 +440,12 @@ header {
 
 .titulo-sobre .destaque {
     font-style: italic;
-    color: #03f37b; /* Nome em verde itálico */
+    color: #B34A4E; /* Nome em verde itálico */
 }
 
 .descricao-sobre {
     font-size: 14px;
-    color: #a0a0a0;
+    color: #000;
     line-height: 1.6;
     margin-bottom: 30px;
 }
@@ -455,9 +455,9 @@ header {
     align-items: center;
     gap: 10px;
     padding: 12px 26px;
-    border: 1px solid #03f37b;
+    border: 1px solid #000;
     border-radius: 30px;
-    color: #ffffff;
+    color: #000;
     text-decoration: none;
     font-size: 13px;
     width: fit-content;
@@ -465,7 +465,7 @@ header {
 }
 
 .btn-conheca-mais:hover {
-    background-color: #03f37b;
+    background-color: #B34A4E;
     color: #000000;
     font-weight: bold;
 }
